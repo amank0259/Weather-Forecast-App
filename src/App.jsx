@@ -36,7 +36,7 @@ function App() {
           <h4>Created with <span className='text-red-500'>❤️</span>by Aman</h4>
         </footer>
       </div>
-      <div className="absolute w-full h-full bg-black opacity-60 z-0"></div>
+      <div className="absolute mobile-screen w-full lg:h-full bg-black opacity-60 z-0"></div>
       <div className='text-white flex flex-col justify-center items-center px-8'><BackgroundLayout></BackgroundLayout></div>
       <main className='w-full flex padding-top h-screen flex-wrap gap-8 py-4 px-[10%] items-center justify-center'>
         <WeatherCard
