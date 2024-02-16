@@ -33,6 +33,9 @@ function App() {
             }} type="text" placeholder='Enter Location' className='focus:outline-none w-full text-[#212121] text-lg' value={input} onChange={e => setInput(e.target.value)} />
           </div>
         </nav>
+        <footer className='absolute bottom-0 left-[42%] pb-4 text-2xl'>
+          <h4>Created with <span className='text-red-500'>❤️</span>by Aman</h4>
+        </footer>
       </div>
       <div className='text-white flex flex-col justify-center items-center px-8'><BackgroundLayout></BackgroundLayout></div>
       <main className='w-full flex padding-top h-screen flex-wrap gap-8 py-4 px-[10%] items-center justify-center'>
