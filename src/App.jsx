@@ -11,7 +11,6 @@ function App() {
 
   const [input, setInput] = useState('')
   const { weather, thisLocation, values, place, setPlace } = useStateContext()
-  // console.log(weather)
 
   const submitCity = () => {
     setPlace(input)
@@ -19,9 +18,9 @@ function App() {
   }
 
   return (
-    <div className='w-full flex flex-col justify-center h-screen text-white'>
-      <div className='absolute w-[100%] overflow-x-hidden px-8 sm:bottom-0 top-0'>
-        <nav className='w-full p-3 flex justify-between lg:px-60 items-center'>
+    <div className='w-full flex flex-col justify-center h-screen text-white relative'>
+      <div className='absolute w-[100%] overflow-x-hidden px-8 sm:bottom-0 top-0 z-10'>
+        <nav className='w-full p-3 flex justify-between lg:px-60 items-centers'>
           <h1 className='font-bold tracking-wide text-3xl'>Weather Forecast</h1>
           <div className='bg-white w-[15rem] overflow-hidden shadow-2xl rounded-xl flex items-center p-2 gap-2'>
             <img src={Search} alt="search" className='w-[1.5rem] h-[1.5rem]' />
@@ -33,10 +32,11 @@ function App() {
             }} type="text" placeholder='Enter Location' className='focus:outline-none w-full text-[#212121] text-lg' value={input} onChange={e => setInput(e.target.value)} />
           </div>
         </nav>
-        <footer className='absolute bottom-0 left-[42%] pb-4 text-2xl'>
+        <footer className='absolute hidden lg:block bottom-0 left-[42%] pb-4 text-2xl'>
           <h4>Created with <span className='text-red-500'>❤️</span>by Aman</h4>
         </footer>
       </div>
+      <div className="absolute w-full h-full bg-black opacity-60 z-0"></div>
       <div className='text-white flex flex-col justify-center items-center px-8'><BackgroundLayout></BackgroundLayout></div>
       <main className='w-full flex padding-top h-screen flex-wrap gap-8 py-4 px-[10%] items-center justify-center'>
         <WeatherCard
